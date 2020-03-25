@@ -55,7 +55,7 @@ You will have to write three instrument classes:
 * a subclass for MIDI output, `MIDIInstrument` which overrides:
    * `play()` so that it plays out the music using the `MIDISequencePlayer`
    
-You will need a `Sheet` class to contain the sheet music. This class needs to manage the times at which notes get played as well as which notes get played (like sheet music). My solution involved using a Map matching beat time (Integer) with an ArrayList of notes to be played, but you could also choose a 2D ArrayList or Array (we skipped over talking about that in lecture, I was planning to catch it in a later tutorial). It will need the following methods:
+You will need a `Sheet` class to contain the sheet music. This class needs to manage the times at which notes get played as well as which notes get played (like [sheet music](https://en.wikipedia.org/wiki/Sheet_music)). My solution involved using a Map matching beat time (Integer) with an ArrayList of notes to be played, but you could also choose a 2D ArrayList or Array (we skipped over talking about that in lecture, I was planning to catch it in a later tutorial). It will need the following methods:
 * A constructor which takes a file name and loads a set of notes into the `Sheet` from the file.
 * `void addNote(int time, Note note)` which adds the note at the specified beat
 * `int lastTime()` which returns the last time any note is played at (You'll want this for the instruments to see how long you need to loop)
@@ -70,7 +70,7 @@ You will also need a `Note` class to fill the `Sheet`. We could probably just us
    * `QuarterNote` returns 4.
 * You will probably want a helper method which translates the written music in the file useful note information. 
 
-Finally you will need a main class which can prompt for the file name and player type, load it and play it back.
+Finally you will need a main class which can prompt for the file name and player type, load it and play it back. The player type should be either the text or music player, and you can offer to let them both run at the same time.
 
 ## Exception Handling
 
